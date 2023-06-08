@@ -1,7 +1,7 @@
-PROJECT_NAME = bubblesort
+PROJECT_NAME = lab3-ds-um
 PROCESSOR    = p16f877a # Required by disassembler
 
-SOURCE_FILE = bubblesort.asm
+SOURCE_FILE = statistics.asm
 SOURCE_DIR = src/
 OUTPUT_DIR = out/
 
@@ -15,6 +15,7 @@ COD = gpvc -d
 SIM = gpsim
 
 all: $(HEX_FILE_PATH)
+asm: $(HEX_FILE_PATH)
 
 $(HEX_FILE_PATH): $(SOURCE_PATH)
 	@mkdir -p $(OUTPUT_DIR:%=./%/)
@@ -32,10 +33,10 @@ $(COD_FILE_PATH): $(HEX_FILE_PATH)
 viewcod: $(COD_FILE_PATH)
 	@$(COD) $(COD_FILE_PATH)
 
-sim: $(COD_FILE_PATH)
+simcli: $(COD_FILE_PATH)
 	@$(SIM) -i -s $(COD_FILE_PATH)
 
-simgui: $(COD_FILE_PATH)
+sim: $(COD_FILE_PATH)
 	@$(SIM) -s $(COD_FILE_PATH)
 
 .PHONY: clean
