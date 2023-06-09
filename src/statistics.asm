@@ -172,7 +172,7 @@ load_test_array_0
 
     movlw	0x40            ; array_address is loadad with the address where the first data is positioned
     movwf	array_address
-    movlw	d'8'    ; array_length is loaded with the legnth of data
+    movlw	d'8'
     movwf	array_length
 
     return
