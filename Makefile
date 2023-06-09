@@ -1,7 +1,7 @@
 PROJECT_NAME = lab3-ds-um
 PROCESSOR    = p16f877a # Required by disassembler
 
-SOURCE_FILE = statistics.asm
+SOURCE_FILE = bubblesort.asm
 SOURCE_DIR = src/
 OUTPUT_DIR = out/
 
