@@ -6,9 +6,10 @@
 ;   Author: Gianni Labella
 ;   Company: Universidad de Montevideo
 
+
 ; *** Processor Config ***
-    list		p=16f877a       ; list directive to define processor
-    #include	<p16f877a.inc>  ; processor specific variable definitions
+    list        p=16f877a       ; list directive to define processor
+    #include    <p16f877a.inc>  ; processor specific variable definitions
 
     __CONFIG _CP_OFF & _WDT_OFF & _BODEN_OFF & _PWRTE_ON & _RC_OSC & _WRT_OFF & _LVP_ON & _CPD_OFF
 
